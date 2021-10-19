@@ -21,6 +21,12 @@ for f in os.listdir(current_dir):
                 os.path.join(current_dir, f"{filename}{file_ext}"),
                 os.path.join(r"C://Users//Vinxek//Pictures", f"{filename}{file_ext}")
             )
+        elif file_ext in audio_formats:
+                shutil.move(
+                os.path.join(current_dir, f"{filename}{file_ext}"),
+                os.path.join(r"C://Users//Vinxek//Music", f"{filename}{file_ext}")
+            )
+            
     
     except (FileNotFoundError, PermissionError):
         pass
